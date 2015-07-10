@@ -71,6 +71,11 @@
 
       <main ng-class="{homepage: isActiveNav('/')}">
          <div ui-view></div>
+
+         <div ng-controller="TestCtrl">
+            <div ng-bind="test.name"></div>
+        </div>
+        
       </main>
 
       <!-- Only displays if SC-app-festival is installed and Festival Footer view is included -->
