@@ -1,7 +1,7 @@
 'use strict';
 
 angular
-  .module('SC-app')
+  .module('southbankcentre')
   .constant('angularMomentConfig', {
 
     timezone: 'Europe/London'

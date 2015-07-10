@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('SC-app').config(function($stateProvider) {
+angular.module('southbankcentre').config(function($stateProvider) {
 
     $stateProvider
       .state('app', {

@@ -2,13 +2,13 @@
 
 /**
  * @ngdoc controller
- * @name SC-app.controller:CoreCtrl
+ * @name southbankcentre.controller:CoreCtrl
  * @controller
  *
  * @description
  * Defines the state and behaviour of the $scope for the base state
  */
-angular.module('SC-app')
+angular.module('southbankcentre')
   .controller('AppCtrl', function($scope, $location, $anchorScroll) {
 
     $scope.scrollTo = function(id) {

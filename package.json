@@ -1,9 +1,9 @@
 {
-  "name": "sc-app",
-  "version": "0.2.0",
-  "description": "The AngularJS based front end for SC-app-longname",
+  "name": "southbankcentre",
+  "version": "0.0.0",
+  "description": "The AngularJS based front end for Southbank Centre",
   "appDetails": {
-    "longName": "SC-app-longname"
+    "longName": "Southbank Centre"
   },
   "contributors": [
     {

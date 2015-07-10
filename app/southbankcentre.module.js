@@ -2,11 +2,11 @@
 
 /**
  * @ngdoc overview
- * @name SC-app
+ * @name southbankcentre
  * @description
  */
 angular
-  .module('SC-app', [
+  .module('southbankcentre', [
     'ngAnimate',
     'ngCookies',
     'ngResource',

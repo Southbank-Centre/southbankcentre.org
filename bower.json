@@ -1,7 +1,7 @@
 {
-  "name": "sc-app",
-  "version": "0.2.0",
-  "description": "The AngularJS based front end for SC-app-longname",
+  "name": "southbankcentre",
+  "version": "0.0.0",
+  "description": "The AngularJS based front end for Southbank Centre",
   "authors": [
     "Sam Murray <sam.murray@southbankcentre.co.uk>",
     "Dave Vernon <dave.vernon@southbankcentre.co.uk>"
