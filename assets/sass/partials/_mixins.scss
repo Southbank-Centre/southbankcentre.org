@@ -1,0 +1,19 @@
+// Mixin for REM units with pixel fallback
+@mixin font-size($sizeValue: 1.6) {
+  font-size: $sizeValue + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin valign-center {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+}
+
+@mixin special-link {
+  font-weight: bold;
+  color: $dark-grey;
+  letter-spacing: $header-letter-spacing;
+}

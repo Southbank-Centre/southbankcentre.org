@@ -1,0 +1,45 @@
+{
+  "name": "sc-app",
+  "version": "0.2.0",
+  "description": "The AngularJS based front end for SC-app-longname",
+  "authors": [
+    "Sam Murray <sam.murray@southbankcentre.co.uk>",
+    "Dave Vernon <dave.vernon@southbankcentre.co.uk>"
+  ],
+  "appPath": "",
+  "keywords": [
+    "base app"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "app",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "Gruntfile.js",
+    "test"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "angular": "~1.4.2",
+    "jquery.lazyload": "~1.9.5",
+    "json3": "~3.3.2",
+    "es5-shim": "~4.1.8",
+    "angular-resource": "~1.4.2",
+    "angular-cookies": "~1.4.2",
+    "angular-sanitize": "~1.4.2",
+    "angular-animate": "~1.4.2",
+    "angular-touch": "~1.4.2",
+    "angular-ui-router": "~0.2.15",
+    "breakpoint-sass": "~2.6.1",
+    "angular-filter": "~0.5.1",
+    "SC-app-utils": "Southbank-Centre/SC-app-utils#0.2.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.4.2",
+    "angular-scenario": "~1.4.2"
+  },
+  "appPath": ""
+}

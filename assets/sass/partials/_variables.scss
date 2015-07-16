@@ -1,0 +1,24 @@
+$margin: 20px;
+$padding: 20px;
+$section-margin-top: 60px;
+$header-letter-spacing: -.02em;
+$bold-letter-spacing: -.01em;
+$body-letter-spacing: .03em;
+
+// Colours
+$white: #fff;
+$light-grey: #f7f7f7;
+$mid-grey: #999999;
+$dark-grey: #262626;
+$link-color: #0080ff;
+$secondary-highlight: #2cd1b3;
+$yellow-highlight: #ffd800;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-mobile-max: max-width 667px;
+$bp-small-tablet: 600px;
+$bp-tablet: 700px;
+$bp-small-desktop: 768px;
+$bp-desktop: 960px;
+$bp-fullwidth: 1280px;

@@ -1,0 +1,106 @@
+// Search filters
+
+.search-filters {
+    @include clearfix;
+
+    background: $yellow-highlight;
+    padding: $padding/4*3 0 0;
+    line-height: 50px;
+
+    h2 {
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      @include font-size(16);
+      font-weight:bold;
+
+      @include breakpoint($bp-mobile) {
+        line-height: 50px;
+      }
+
+      float: left;
+      line-height: 50px;
+      margin: 0 0 $margin*0.75 $margin;
+    }
+
+    label {
+      visibility:hidden;
+      float:left;
+      height:0px;
+      width:0px;
+    }
+
+    select { 
+      @include font-size(21);
+
+      @include breakpoint($bp-mobile) {
+        line-height: 50px;
+        float:left;
+        width: auto;
+      }
+
+      line-height: 50px;
+      margin: 0 0 $margin*0.75 $margin;
+      font-family: 'SC AkkuratBold';
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      -moz-user-select: none;
+      padding: 0 $padding*2 0 $padding;
+      border: 0;
+      border-radius: 0;
+      cursor: pointer;
+      height: 50px;
+      background-color: white;
+      background-image: url('../imgs/icon-sprite.png');
+      background-size: 20px auto;
+      background-repeat: no-repeat;
+      background-position: right -35px;
+      border-right: 10px solid white;
+      vertical-align: top;
+    }
+
+    select::-ms-expand {
+      display: none;
+    }
+
+    input {
+      margin: 0;
+      padding: 0 $padding*2 0 $padding/2;
+      border: none;
+      float: left;
+      height: 40px;
+      color: $dark-grey;
+      background-color: white;
+      background-image: url(../imgs/icon-sprite.png);
+      background-size: 20px auto;
+      background-repeat: no-repeat;
+      background-position: right -120px;
+      border-right: 10px solid white;
+      vertical-align: top;
+      margin: 0 0 $margin/4*3 $margin;
+    }
+
+    ::-webkit-input-placeholder {
+      color: $dark-grey;
+    }
+    ::-moz-input-placeholder {
+      color: $dark-grey;
+    }
+
+  }
+
+.no-results { padding: $padding; }
+
+.lt-ie10 {
+
+    .search-filters {
+
+      select {
+
+        background-image:none;
+        padding-right:0;
+        border-right:0;
+
+      }
+
+    }
+
+}

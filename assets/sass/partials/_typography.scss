@@ -1,0 +1,161 @@
+html {
+  font-size: 62.5%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include font-size(16);
+  line-height: 1.625;
+  color: $dark-grey;
+  font-style:normal;
+  font-weight:400;
+  letter-spacing: $body-letter-spacing;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+input { 
+  @include font-size(16);
+}
+
+// FONTS
+
+@font-face {
+  font-family: 'SC AkkuratBold';
+  src: url('../fonts/lineto-akkurat-pro-bold.eot');
+  src: url('../fonts/lineto-akkurat-pro-bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lineto-akkurat-pro-bold.woff') format('woff'),
+  url('../fonts/lineto-akkurat-pro-bold.ttf') format('truetype'),
+    url('../fonts/lineto-akkurat-pro-bold.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SC AkkuratBoldItalic';
+  src: url('../fonts/lineto-akkurat-pro-bolditalic.eot');
+  src: url('../fonts/lineto-akkurat-pro-bolditalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lineto-akkurat-pro-bolditalic.woff') format('woff'),
+  url('../fonts/lineto-akkurat-pro-bolditalic.ttf') format('truetype'),
+    url('../fonts/lineto-akkurat-pro-bolditalic.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SC AkkuratLight';
+  src: url('../fonts/lineto-akkurat-pro-light.eot');
+  src: url('../fonts/lineto-akkurat-pro-light.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lineto-akkurat-pro-light.woff') format('woff'),
+  url('../fonts/lineto-akkurat-pro-light.ttf') format('truetype'),
+  url('../fonts/lineto-akkurat-pro-light.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SC AkkuratLightItalic';
+  src: url('../fonts/lineto-akkurat-pro-lightitalic.eot');
+  src: url('../fonts/lineto-akkurat-pro-lightitalic.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/lineto-akkurat-pro-lightitalic.woff') format('woff'),
+  url('../fonts/lineto-akkurat-pro-lightitalic.ttf') format('truetype'),
+  url('../fonts/lineto-akkurat-pro-lightitalic.svg') format('svg');
+  font-weight: bold;
+  font-style: normal;
+}
+
+h1 {
+  @include font-size(28);
+  line-height: 1.285714;
+  font-family: 'SC AkkuratBold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: $header-letter-spacing;
+  margin: 0 0 0.5em;
+
+  em {
+    font-style: normal;
+    font-family: 'SC AkkuratBoldItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+}
+.large-heading {
+  @include font-size(40);
+  line-height: 1;
+  margin-bottom: 0.25em;
+  padding: $padding/2 $padding 0;
+  
+  @include breakpoint($bp-mobile) {
+    @include font-size(60);
+  }
+
+}
+
+h2 {
+  @include font-size(26);
+  line-height: 1.384615;
+  font-family: 'SC AkkuratLight', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0; 
+
+  em {
+    font-style: normal;
+    font-family: 'SC AkkuratLightItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+}
+.app-heading {
+  @include font-size(22);
+  line-height: 1;
+  @include breakpoint($bp-mobile) {
+    @include font-size(32);
+  }
+}
+
+h3 {
+  @include font-size(21);
+  line-height: 1.428571;
+  font-family: 'SC AkkuratBold', Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  letter-spacing: $header-letter-spacing;
+  margin: 0 0 0.5em;
+
+  em {
+    font-style: normal;
+    font-family: 'SC AkkuratBoldItalic', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  }
+
+}
+
+h4 {
+  margin: 0 0 1em;
+  font-weight: bold;
+  letter-spacing: $header-letter-spacing;
+}
+
+p {
+  margin: 1em 0; 
+}
+.large-paragraph {
+  @include font-size(21);
+  line-height: 1.428571;
+  font-family: 'SC AkkuratLight';
+  letter-spacing: 0;
+}
+
+strong {
+  letter-spacing: $bold-letter-spacing;
+}
+
+q {
+  display: block;
+  @include font-size(21);
+  line-height: 1.428571;
+  font-family: 'SC AkkuratLight';
+  letter-spacing: 0;
+  margin: 0 0 0.5em;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  &:before { content: open-quote; margin-left: -0.4em; }
+  &:after { content: close-quote; }
+}
+

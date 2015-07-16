@@ -1,0 +1,228 @@
+// GLOBAL STYLES
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $light-grey;
+}
+
+article {
+  clear: both;
+}
+
+ul, ol {
+  margin-left: 1.5em;
+}
+
+.container {
+  @include susy-breakpoint($bp-tablet, 12) {
+    @include container($susy);
+  }
+  @include clearfix;
+  position: relative;
+}
+
+
+// Links
+
+a {
+
+  &:link, 
+  &:visited {
+    color: $link-color;
+    text-decoration: none;
+  }
+
+  &:hover, 
+  &:active {
+    color: $link-color;
+    text-decoration: underline;
+  }
+
+}
+
+.book-now-btn, 
+.book-now-btn[href^="http://"], 
+.book-now-btn[href^="https://"] {
+  display: block;
+  margin-top: 3px;
+  background-color: $link-color;
+  color: $white;
+  padding: 0px 10px;
+  font-weight: bold;
+  letter-spacing: $bold-letter-spacing;
+  span {
+    font-weight: normal;
+    float: right;
+    margin-right: 40px;
+  }
+  background-image: url(../imgs/icon-sprite.png);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  background-position: right 5px top;
+  line-height: 40px;
+  &.free-btn {
+    background-image: none;
+  }
+}
+
+.scroll-link {
+  padding-right: 22px;
+  background-image: url(../imgs/icon-sprite.png);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  background-position: right -50px;
+  line-height: 40px;
+  color: $link-color;
+  cursor: pointer;
+}
+.read-more-link {
+  padding-right: 22px;
+  background-image: url(../imgs/icon-sprite.png);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  background-position: right -170px;
+  line-height: 40px;
+  color: $link-color;
+  cursor: pointer;
+  padding-bottom: 2px;
+}
+
+a[href^="http://"],
+a[href^="https://"] {
+  padding-right: 22px;
+  background-image: url(../imgs/icon-sprite.png);
+  background-size: 20px auto;
+  background-repeat: no-repeat;
+  background-position: right -92px;
+}
+
+
+// Animations 
+
+.slidedown,
+.slideup {
+  -webkit-transition:all 1s;
+  -moz-transition:all 1s;
+  -o-transition:all 1s;
+  transition:all 1s;
+}
+
+.slidedown.ng-hide-remove,
+.slideup.ng-hide-add.ng-hide-add-active {
+  max-height: 0;
+  display: block !important;
+}
+
+.slideup.ng-hide-add,
+.slidedown.ng-hide-remove.ng-hide-remove-active {
+  max-height: 500px; // max-height work-around for unknown height (set max-height to value greater than any expected content) more here: http://n12v.com/css-transition-to-from-auto/ - may need to use javascript animation instead?
+  overflow-y: hidden;
+  display: block !important;
+}
+
+/*  ng-repeat Animation  */
+.repeat-animation.ng-enter,
+.repeat-animation.ng-move {
+  -webkit-transition: all linear 0.5s;
+  -moz-transition: all linear 0.5s;
+  -o-transition: all linear 0.5s;
+  transition: all linear 0.5s;
+}
+.repeat-animation.ng-enter {
+  opacity: 0;
+}
+.repeat-animation.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.repeat-animation.ng-leave {
+  opacity: 1;
+}
+.repeat-animation.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+.repeat-animation.ng-move {
+  opacity: 0.5;
+}
+.repeat-animation.ng-move.ng-move-active {
+  opacity: 1;
+}
+
+/*  ng-hide Animation  */
+.hide-fade.ng-hide-add, .hide-fade.ng-hide-remove {
+  -webkit-transition:all linear 0.5s;
+  -moz-transition:all linear 0.5s;
+  -o-transition:all linear 0.5s;
+  transition:all linear 0.5s;
+  display:block!important;
+}
+
+.hide-fade.ng-hide-add.ng-hide-add-active,
+.hide-fade.ng-hide-remove {
+  opacity:0;
+}
+
+.hide-fade.ng-hide-add,
+.hide-fade.ng-hide-remove.ng-hide-remove-active {
+  opacity:1;
+}
+
+/* page loading spinner */
+.page-loading {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  top: 50%;
+  margin-left: -16px;
+  margin-top: -16px;
+  width: 32px;
+  height: 32px;
+  background: url('../imgs/spinner.png');
+  background-size: 100%;
+  -webkit-animation: ani 1s steps(19) infinite reverse;
+  -moz-animation: ani 1s steps(19) infinite reverse;
+  -ms-animation: ani 1s steps(19) infinite reverse;
+  -o-animation: ani 1s steps(19) infinite reverse;
+  animation: ani 1s steps(19) infinite reverse;
+}
+
+.infinite-scroll-spinner-container {
+  height:100px;
+  position:relative;
+
+  .page-loading {
+    top:auto;
+    bottom:16px;
+  }
+}
+
+@-webkit-keyframes ani {
+  0%{background-position:0 0;}
+  100%{background-position:0 1216px;}
+}
+@-moz-keyframes ani {
+  0%{background-position:0 0;}
+  100%{background-position:0 1216px;}
+}
+@-ms-keyframes ani {
+  0%{background-position:0 0;}
+  100%{background-position:0 1216px;}
+}
+@-o-keyframes ani {
+  0%{background-position:0 0;}
+  100%{background-position:0 1216px;}
+}
+@keyframes ani {
+  0%{background-position:0 0;}
+  100%{background-position:0 1216px;}
+}
+
+.lt-ie10 .page-loading { 
+  background: url('../imgs/spinner.gif');
+}
+
+/* container of festival nav view on base template */
+.festival-nav-view-container {
+}

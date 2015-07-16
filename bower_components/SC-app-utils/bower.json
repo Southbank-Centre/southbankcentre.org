@@ -1,0 +1,33 @@
+{
+  "name": "SC-app-utils",
+  "version": "0.2.0",
+  "description": "Utilities app for Southbank Centre website",
+  "authors": [
+    "Sam Murray <sam.murray@southbankcentre.co.uk>",
+    "Dave Vernon <dave.vernon@southbankcentre.co.uk>"
+  ],
+  "appPath": "app",
+  "main": "./release/SC-app-utils.min.js",
+  "keywords": [
+    "utilities"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "app",
+    "node_modules",
+    "bower_components",
+    "package.json",
+    "Gruntfile.js",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "~1.4.2",
+    "angular-moment": "~0.10.1",
+    "moment-timezone": "~0.4.0",
+    "angular-cache": "4.3.2",
+    "ngInfiniteScroll": "~1.2.1",
+    "angular-scroll": "~0.7.1"
+  }
+}
