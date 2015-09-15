@@ -58,30 +58,11 @@
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <header></header>
 
-    <div>
+    <main ui-view></main>
 
-      <!-- Only displays if SC-app-header is installed -->
-      <header ui-view="header"></header>
-
-      
-
-      <!-- Only displays if SC-app-festival is installed and Festival Banner view is included -->
-      <div ui-view="festivalBanner"></div>
-
-      <main ng-class="{homepage: isActiveNav('/')}">
-         <div ui-view></div>
-
-         <div ng-controller="TestCtrl">
-            <div ng-bind="test.name"></div>
-        </div>
-        
-      </main>
-
-      <!-- Only displays if SC-app-festival is installed and Festival Footer view is included -->
-      <footer ui-view="footer"></footer>
-
-    </div>
+    <footer></footer>
 
     <!-- build:js(.) app/compat/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -103,13 +84,7 @@
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
-    <script src="bower_components/moment/moment.js"></script>
-    <script src="bower_components/angular-moment/angular-moment.js"></script>
-    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
-    <script src="bower_components/angular-cache/dist/angular-cache.js"></script>
-    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-    <script src="bower_components/SC-app-utils/release/SC-app-utils.min.js"></script>
+    <script src="bower_components/scContent/release/scContent.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

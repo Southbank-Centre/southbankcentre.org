@@ -35,11 +35,10 @@
     "angular-ui-router": "~0.2.15",
     "breakpoint-sass": "~2.6.1",
     "angular-filter": "~0.5.1",
-    "SC-app-utils": "Southbank-Centre/SC-app-utils#0.2.0"
+    "scContent": "../angularjs-modules/scContent"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2",
     "angular-scenario": "~1.4.2"
-  },
-  "appPath": ""
+  }
 }

@@ -16,5 +16,5 @@ angular
     'angular.filter',
     'duScroll',
     'angularMoment',
-    'SC-app-utils'
+    'scContent'
   ]);
