@@ -9,11 +9,11 @@
     "*/*/test"
   ],
   "homepage": "https://github.com/Southbank-Centre/angularjs-modules",
-  "_release": "6e1f73eec0",
+  "_release": "d3c283afda",
   "_resolution": {
     "type": "branch",
     "branch": "101583246_frontend_modules",
-    "commit": "6e1f73eec0bfd804af6c8359ed6090045aba1ed9"
+    "commit": "d3c283afdaac1dbc2635cf55cfb01970a308e8e8"
   },
   "_source": "git://github.com/Southbank-Centre/angularjs-modules.git",
   "_target": "101583246_frontend_modules",

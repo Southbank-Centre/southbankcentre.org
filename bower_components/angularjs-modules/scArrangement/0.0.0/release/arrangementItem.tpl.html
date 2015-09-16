@@ -1,1 +1,7 @@
 <h1>{{ vm.arrangement.name }}</h1>
+<p>
+  <strong>{{ vm.arrangement.startDate | amDateFormat:'dddd D MMMM YYYY' }}
+    <span ng-show="vm.arrangement.startDate !== vm.arrangement.endDate"> &ndash; {{ vm.arrangement.endDate | amDateFormat:'dddd D MMMM YYYY' }}</span>
+  </strong>
+</p>
+<p data-ng-bind-html="vm.arrangement.description"></p>
