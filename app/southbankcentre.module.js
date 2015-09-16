@@ -15,7 +15,6 @@
       'ngTouch',
       'ui.router',
       'angular.filter',
-      'angularMoment',
-      'scArrangement'
+      'angularMoment'
     ]);
 })();
