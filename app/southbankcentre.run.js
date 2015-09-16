@@ -1,7 +1,9 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular
-  .module('southbankcentre')
-  .run(function () {
+  angular
+    .module('southbankcentre')
+    .run(function () {
 
-  });
+    });
+})();

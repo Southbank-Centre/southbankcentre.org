@@ -6,7 +6,7 @@
   <head>
     <meta charset="utf-8">
     <title ng-bind="websiteTitle">Southbank Centre</title>
-    <meta name="description" content="{{ websiteDescription }}">
+    <meta name="description" content="The Southbank Centre's Website">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <base href="/">
 
@@ -78,25 +78,32 @@
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     <script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
+    <script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
+    <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
 
     <!-- build:js(.) app/js/scripts.js -->
+    <!-- Southbank Centre Angular.js modules -->
     <script src="bower_components/angularjs-modules/scContent/0.0.0/release/scContent.min.js"></script>
     <script src="bower_components/angularjs-modules/scArrangement/0.0.0/release/scArrangement.js"></script>
-    <script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
+    <!-- Main app files -->
     <script src="app/southbankcentre.module.js"></script>
     <script src="app/southbankcentre.constants.js"></script>
     <script src="app/southbankcentre.states.js"></script>
     <script src="app/southbankcentre.run.js"></script>
+    <!-- App component files -->
+    <script src="app/components/southbankcentreArrangement/southbankcentreArrangement.module.js"></script>
     <!-- endbuild -->
-
+    
 
 </body>
 </html>
