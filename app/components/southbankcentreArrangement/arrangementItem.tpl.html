@@ -1,0 +1,13 @@
+<div style="background-color:yellow;">
+  <h1 style="font-family:Comic Sans MS;color:red;margin-left:40px;font-size:60px">{{ vm.arrangement.name }}</h1>
+  <h2 style="font-family:Comic Sans MS;color:green;margin-left:710px;margin-top:50px">Start time {{ vm.arrangement.startDate | amDateFormat:'ha' }}
+    <span ng-show="vm.arrangement.startDate !== vm.arrangement.endDate"> ... End time :S</span>
+  </h2>
+  <p style="font-family:Comic Sans MS;color:purple;margin-left:20px;width:700px;margin-top:-20px" data-ng-bind-html="vm.arrangement.description"></p>
+  <h3 style="font-family:Comic Sans MS;margin-left:230px">Performers</h3>
+  <ul style="font-family:Comic Sans MS;margin-left:230px">
+    <li ng-repeat="(i, performer) in vm.arrangement.performer">
+      <a href="{{ performer }}">Performer {{ i + 1 }}</a>
+    </li>
+  </ul>
+</div>
