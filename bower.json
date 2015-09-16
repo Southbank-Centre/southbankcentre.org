@@ -22,20 +22,20 @@
     "test"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
     "angular": "~1.4.2",
-    "jquery.lazyload": "~1.9.5",
-    "json3": "~3.3.2",
-    "es5-shim": "~4.1.8",
-    "angular-resource": "~1.4.2",
-    "angular-cookies": "~1.4.2",
-    "angular-sanitize": "~1.4.2",
     "angular-animate": "~1.4.2",
+    "angular-cookies": "~1.4.2",
+    "angular-filter": "~0.5.1",
+    "angular-resource": "~1.4.2",
+    "angular-sanitize": "~1.4.2",
     "angular-touch": "~1.4.2",
     "angular-ui-router": "~0.2.15",
+    "angularjs-modules": "Southbank-Centre/angularjs-modules#101583246_frontend_modules",
     "breakpoint-sass": "~2.6.1",
-    "angular-filter": "~0.5.1",
-    "scContent": "../angularjs-modules/scContent"
+    "es5-shim": "~4.1.8",
+    "jquery": "~2.1.4",
+    "jquery.lazyload": "~1.9.5",
+    "json3": "~3.3.2"
   },
   "devDependencies": {
     "angular-mocks": "~1.4.2",

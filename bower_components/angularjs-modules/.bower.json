@@ -1,0 +1,22 @@
+{
+  "name": "angularjs-modules",
+  "ignore": [
+    "**/.*",
+    "*/*/app",
+    "*/*/node_modules",
+    "*/*/package.json",
+    "*/*/Gruntfile.js",
+    "*/*/test"
+  ],
+  "homepage": "https://github.com/Southbank-Centre/angularjs-modules",
+  "_release": "efdd3e62ff",
+  "_resolution": {
+    "type": "branch",
+    "branch": "101583246_frontend_modules",
+    "commit": "efdd3e62ff980e72978af8bd1e7a36e003153029"
+  },
+  "_source": "git://github.com/Southbank-Centre/angularjs-modules.git",
+  "_target": "101583246_frontend_modules",
+  "_originalSource": "Southbank-Centre/angularjs-modules",
+  "_direct": true
+}

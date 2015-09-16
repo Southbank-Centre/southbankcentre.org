@@ -14,7 +14,5 @@ angular
     'ngTouch',
     'ui.router',
     'angular.filter',
-    'duScroll',
-    'angularMoment',
-    'scContent'
+    'scArrangement'
   ]);
