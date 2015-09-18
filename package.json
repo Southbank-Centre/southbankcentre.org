@@ -17,10 +17,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Southbank-Centre/SC-app.git"
+    "url": "https://github.com/Southbank-Centre/southbankcentre.org.git"
   },
   "bugs": {
-    "url": "https://github.com/Southbank-Centre/SC-app/issues"
+    "url": "https://github.com/Southbank-Centre/southbankcentre.org/issues"
   },
   "keywords": [
     "Base app"

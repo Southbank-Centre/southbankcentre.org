@@ -2,11 +2,11 @@
 <!--[if IE 7 ]>    <html class="ie lt-ie10 lt-ie9 lt-ie8 ie7 no-js" lang="en" ng-app="southbankcentre"> <![endif]-->
 <!--[if IE 8 ]>    <html class="ie lt-ie10 lt-ie9 ie8 no-js" lang="en" ng-app="southbankcentre"> <![endif]-->
 <!--[if IE 9 ]>    <html class="ie lt-ie10 ie9 no-js" lang="en" ng-app="southbankcentre"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html class="not-ie9 no-js" lang="en" ng-app="southbankcentre"  data-ng-controller='AppCtrl'> <!--<![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="not-ie9 no-js" lang="en" ng-app="southbankcentre"> <!--<![endif]-->
   <head>
     <meta charset="utf-8">
-    <title ng-bind="websiteTitle">Southbank Centre</title>
-    <meta name="description" content="{{ websiteDescription }}">
+    <title>Southbank Centre</title>
+    <meta name="description" content="The Southbank Centre's Website">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <base href="/">
 
@@ -58,30 +58,11 @@
     <!--[if lt IE 9]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+    <header></header>
 
-    <div>
+    <main ui-view></main>
 
-      <!-- Only displays if SC-app-header is installed -->
-      <header ui-view="header"></header>
-
-      
-
-      <!-- Only displays if SC-app-festival is installed and Festival Banner view is included -->
-      <div ui-view="festivalBanner"></div>
-
-      <main ng-class="{homepage: isActiveNav('/')}">
-         <div ui-view></div>
-
-         <div ng-controller="TestCtrl">
-            <div ng-bind="test.name"></div>
-        </div>
-        
-      </main>
-
-      <!-- Only displays if SC-app-festival is installed and Festival Footer view is included -->
-      <footer ui-view="footer"></footer>
-
-    </div>
+    <footer></footer>
 
     <!-- build:js(.) app/compat/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -94,34 +75,34 @@
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
-    <script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
     <script src="bower_components/angular-filter/dist/angular-filter.js"></script>
     <script src="bower_components/moment/moment.js"></script>
     <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery.lazyload/jquery.lazyload.js"></script>
+    <script src="bower_components/jquery.lazyload/jquery.scrollstop.js"></script>
     <script src="bower_components/moment-timezone/builds/moment-timezone-with-data-2010-2020.js"></script>
-    <script src="bower_components/angular-cache/dist/angular-cache.js"></script>
-    <script src="bower_components/ngInfiniteScroll/build/ng-infinite-scroll.js"></script>
-    <script src="bower_components/angular-scroll/angular-scroll.js"></script>
-    <script src="bower_components/SC-app-utils/release/SC-app-utils.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
 
     <!-- build:js(.) app/js/scripts.js -->
+    <!-- Southbank Centre Angular.js modules -->
+
+    <!-- Main app files -->
     <script src="app/southbankcentre.module.js"></script>
     <script src="app/southbankcentre.constants.js"></script>
     <script src="app/southbankcentre.states.js"></script>
     <script src="app/southbankcentre.run.js"></script>
-    <script src="app/AppCtrl.js"></script>
-    <!-- endbuild -->
+    <!-- App component files -->
 
+    <!-- endbuild -->
+    
 
 </body>
 </html>

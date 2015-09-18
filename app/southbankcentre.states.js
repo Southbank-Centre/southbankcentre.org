@@ -1,17 +1,21 @@
-'use strict';
+(function() {
+  'use strict';
 
-angular.module('southbankcentre').config(function($stateProvider) {
+  angular.module('southbankcentre').config(function($locationProvider, $stateProvider) {
 
-    $stateProvider
-      .state('app', {
-        url: '',
-        views: {}
-      })
-      .state('app.home', {
-        url: '/',
-        views: {
-          '@': {}
-        }
-      });
+      $locationProvider.html5Mode(true);
 
-  });
+      $stateProvider
+        .state('app', {
+          url: '',
+          views: {}
+        })
+        .state('app.home', {
+          url: '/',
+          views: {
+            '@': {}
+          }
+        });
+
+    });
+})();
