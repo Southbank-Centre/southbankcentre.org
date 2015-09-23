@@ -10,7 +10,7 @@ describe('Example', function() {
   });
 
   it('should have a title', function(){
-    expect(browser.getTitle()).not.toBeDefined();
+    expect(browser.getTitle()).toBeDefined();
   });
 
 });

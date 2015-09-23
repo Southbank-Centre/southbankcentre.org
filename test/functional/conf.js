@@ -61,6 +61,24 @@ exports.config = {
       browserName: 'firefox',
       name: 'Testing with firefox',
       'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      browserName: 'internet explorer',
+      name: 'Testing with IE9',
+      version: '9',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      browserName: 'internet explorer',
+      name: 'Testing with IE10',
+      version: '10',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      browserName: 'internet explorer',
+      name: 'Testing with IE11',
+      version: '11',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     }
   ],
 
