@@ -21,6 +21,7 @@ machine:
 dependencies:
   override:
     - npm install -g bower
+    - npm install -g grunt-cli
     - npm install
     - bundle install --system
     - bower install
