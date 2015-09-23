@@ -9,19 +9,38 @@
  * https://github.com/angular/protractor/blob/master/docs/referenceConf.js
  */
 
+// Determines whether or not to run the tests on sauce labs
+function useSauceLabs() {
+  var sauceLabs = exports.config.params.isSauceLabs;
+  var sauceLabsPos = process.argv.indexOf('--params.isSauceLabs');
+  if (sauceLabsPos > -1) {
+    sauceLabs = parseInt(process.argv[sauceLabsPos + 1]);
+  }
+
+  return sauceLabs;
+}
+
 exports.config = {
 
   // Saucelabs credentials.
-  sauceUser: process.env.SAUCE_USERNAME,
-  sauceKey: process.env.SAUCE_ACCESS_KEY,
+  get sauceUser() {
+    if (useSauceLabs()) {
+      return process.env.SAUCE_USERNAME;
+    }
+  },
+  get sauceKey() {
+    if (useSauceLabs()) {
+      return process.env.SAUCE_ACCESS_KEY;
+    }
+  },
   
   // Tests to run
   specs: [
-    '**/*.js'
+    'specs/**/*.js'
   ],
 
   suites: {
-    example: ['example/*.js']
+    example: ['specs/example/*.js']
   },
 
   // Single Browser
@@ -35,17 +54,18 @@ exports.config = {
   multiCapabilities: [
     {
       browserName: 'chrome',
-      name: 'Testing with chrome'
+      name: 'Testing with chrome',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     },
     {
       browserName: 'firefox',
-      name: 'Testing with firefox'
+      name: 'Testing with firefox',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     }
   ],
 
   params: {
-    backUrl: 'http://api.sc.circle:8080',
-    frontUrl: 'http://sc.circle:8081'
+    url: 'http://sc.circle:8080'
   },
 
   framework: 'jasmine2',
