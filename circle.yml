@@ -20,6 +20,7 @@ machine:
 
 dependencies:
   override:
+    - npm install -g bower
     - npm install
     - bundle install --system
     - bower install
