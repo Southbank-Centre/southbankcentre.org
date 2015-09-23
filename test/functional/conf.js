@@ -69,7 +69,6 @@ exports.config = {
   },
 
   framework: 'jasmine2',
-  },
 
   // Options to be passed to jasmine-node.
   jasmineNodeOpts: {
