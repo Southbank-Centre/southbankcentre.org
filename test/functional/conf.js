@@ -79,6 +79,14 @@ exports.config = {
       name: 'Testing with IE11',
       version: '11',
       'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      browserName: 'chrome',
+      name: 'Testing with chrome - emulating iPhone',
+      mobileEmulation: {
+        deviceName: 'Apple iPhone 6'
+      },
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     }
   ],
 
