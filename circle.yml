@@ -45,7 +45,7 @@ test:
     - mkdir sc-latest
     - tar -zxf sc-latest-linux.tar.gz --strip-components=1 -C sc-latest
   override:
-    - ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -f ~/sc_ready -i $SAUCE_TUNNEL_ID:
+    - ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -f ~/sc_ready -i $SAUCE_TUNNEL_ID -B all:
         background: true
         pwd: sc-latest
     # Wait for tunnel to be ready
@@ -62,6 +62,10 @@ test:
 
 general:
   branches:
-    ignore:
-      # add your branch name here if you don't want it to build in CircleCI
-      - do_not_build_this_branch
+    only:
+      # We only want to build these branches automatically because we have
+      # limited sauce labs testing available. Builds in other branches
+      # can be triggered manually from the Circle UI
+      - develop
+      - master
+      - /release-.*/
