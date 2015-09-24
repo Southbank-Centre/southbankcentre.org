@@ -81,11 +81,28 @@ exports.config = {
       'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     },
     {
-      browserName: 'chrome',
-      name: 'Testing with chrome - emulating iPhone',
-      mobileEmulation: {
-        deviceName: 'Apple iPhone 6'
-      },
+      browserName: 'safari',
+      name: 'Testing with Safari 8',
+      version: '8',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      platformName: 'iOS',
+      platformVersion: '8.4',
+      browserName: '',
+      app: 'safari',
+      deviceName: 'iPhone Simulator',
+      name: 'Testing with iOS 8.4 Safari',
+      'appium-version': '1.4.0',
+      'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
+    },
+    {
+      platformName: 'Android',
+      platformVersion: '4.4',
+      browserName: 'Browser',
+      deviceName: 'Android Emulator',
+      name: 'Testing with Android 4.4 browser',
+      'appium-version': "1.4.0",
       'tunnel-identifier': process.env.SAUCE_TUNNEL_ID
     }
   ],
