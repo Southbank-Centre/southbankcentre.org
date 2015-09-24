@@ -1,0 +1,6 @@
+Listen 8080
+
+<VirtualHost *:8080>
+    ServerName sc.circle
+    DocumentRoot /home/ubuntu/southbankcentre.org/dist
+</VirtualHost>

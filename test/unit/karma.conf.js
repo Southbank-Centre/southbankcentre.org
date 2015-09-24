@@ -26,7 +26,7 @@ module.exports = function(config) {
     exclude: [],
 
     // web server port
-    port: 8080,
+    port: 9990,
 
     // Start these browsers, currently available:
     // - Chrome
@@ -43,7 +43,12 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-mocha-reporter'
+    ],
+
+    reporters: [
+        'mocha'
     ],
 
     // Continuous Integration mode

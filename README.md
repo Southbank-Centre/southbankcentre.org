@@ -76,8 +76,16 @@ See the README for [SC-app-landing-page](https://github.com/Southbank-Centre/SC-
 
 Tests have been written to ensure that the website functions and displays as expected. They currently create their own content in the CMS which is used to test against (this content is deleted at the end of the tests).
 
-@TODO test against real content in the CMS rather than creating/deleting test content for each test. 
+### Functional tests
 
 Functional tests are written in [Protractor](https://angular.github.io/protractor) and reside in the `test/functional` directory. Please refer to the [README.md](https://github.com/Southbank-Centre/southbankcentre.org/tree/master/test/functional) in this directory for instructions on how to run them.
 
-@TODO add unit tests as well as functional tests.
+### Unit tests
+
+Unit tests are written using the Jasmine framework and are run using the Karma test runner. To run unit tests:
+
+1. Install karma-cli globally: `$ npm install -g karma-cli`
+2. Install dependencies: `$ npm install`
+3. Run karma. From the test/unit directory run `$ karma start karma.conf.js --single-run`
+
+You can run karma and have it run tests when your test files change. From the test/unit directory run `$ karma start karma.conf.js`

@@ -1,0 +1,71 @@
+machine:
+  php:
+    version: 5.5.11
+
+  node:
+    version: 0.12.2
+
+  ruby:
+    version:
+      2.0.0-p353
+
+  # Override /etc/hosts
+  hosts:
+    sc.circle: 127.0.0.1
+
+
+  environment:
+    SAUCE_TUNNEL_ID: circle-southbankcentre-$CIRCLE_BUILD_NUM
+    NODE_PATH: $HOME/nvm/versions/node/v0.12.2/lib/node_modules
+
+dependencies:
+  override:
+    - npm install -g bower
+    - npm install -g grunt-cli
+    - npm install -g karma-cli
+    - npm install
+    - bundle install --system
+    - bower install
+    - grunt build
+
+  post:
+    # apache module setup
+    - a2enmod rewrite
+    # apache vhost setup
+    - cp $HOME/southbankcentre.org/ci/app.vhost /etc/apache2/sites-available/app
+    - a2ensite app
+    - sudo service apache2 restart
+
+test:
+  pre:
+    # protractor setup
+    - npm install -g protractor@1.8.0
+    # saucelabs setup
+    - wget https://saucelabs.com/downloads/sc-latest-linux.tar.gz
+    - mkdir sc-latest
+    - tar -zxf sc-latest-linux.tar.gz --strip-components=1 -C sc-latest
+  override:
+    - ./bin/sc -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY -f ~/sc_ready -i $SAUCE_TUNNEL_ID -B all:
+        background: true
+        pwd: sc-latest
+    # Wait for tunnel to be ready
+    - while [ ! -e ~/sc_ready ]; do sleep 1; done
+    # Run functional tests
+    - protractor conf.js --params.url 'http://sc.circle:8080' --params.isSauceLabs 1:
+        pwd:
+          test/functional
+    # Run unit tests
+    - karma start karma.conf.js --single-run:
+        pwd:
+          test/unit
+
+
+general:
+  branches:
+    only:
+      # We only want to build these branches automatically because we have
+      # limited sauce labs testing available. Builds in other branches
+      # can be triggered manually from the Circle UI
+      - develop
+      - master
+      - /release-.*/
