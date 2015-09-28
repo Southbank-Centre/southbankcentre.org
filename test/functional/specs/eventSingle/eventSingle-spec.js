@@ -82,16 +82,6 @@ describe('The single event page', function() {
     expect(element(by.css('.event-title__name')).getText()).toEqual('Event name');
     expect(element(by.css('.event-title__suffix')).getText()).toEqual('Event suffix');
     expect(element(by.css('.event-date')).getText()).toEqual('Tuesday 23 February 2016 at 7:30pm');
-
-    browser.manage().logs().get('browser').then(function(browserLogs) {
-      // browserLogs is an array of objects with level and message fields
-      browserLogs.forEach(function(log){
-        if (log.level.value > 900) { // it's an error log
-          console.log('Browser console error!');
-          console.log(log.message);
-        }
-      });
-    });
   });
 
   it('should display a multi-day event with a single performance correctly', function() {
