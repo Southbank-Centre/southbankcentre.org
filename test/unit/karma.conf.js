@@ -19,6 +19,15 @@ module.exports = function(config) {
     // list of files / patterns to load in the browser
     files: [
       // bower components and app files should also be included here
+      'bower_components/angular/angular.min.js',
+      'bower_components/angular-mocks/angular-mocks.js',
+      'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+      'bower_components/moment/moment.js',
+      'bower_components/angularjs-modules/**/release/*.min.js',
+      'bower_components/angularjs-modules/**/release/*.html',
+      'app/**/*.module.js',
+      'app/**/*.js',
+      'app/**/*.html',
       'test/unit/**/*.js'
     ],
 
