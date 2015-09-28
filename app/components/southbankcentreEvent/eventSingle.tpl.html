@@ -1,0 +1,15 @@
+<div class="event-single">
+
+  <div class="container event-title">
+    <div class="event-title__prefix" ng-show="vm.event.field_event_prefix">{{ vm.event.field_event_prefix }}</div>
+    <h1 class="event-title__name" ng-show="vm.event.name">{{ vm.event.name }}</h1>
+    <div class="event-title__suffix"  ng-show="vm.event.field_event_suffix">{{ vm.event.field_event_suffix }}</div>
+  </div>
+
+  <div class="container event-date">
+    <span class="event-start-date">{{ vm.event.startDate | amDateFormat:'dddd D MMMM YYYY' }}</span>
+    <span class="event-end-date" ng-show="vm.event.startDate !== vm.event.endDate">&ndash; {{ vm.event.endDate | amDateFormat:'dddd D MMMM YYYY' }}</span>
+    <span class="event-start-time" ng-show="vm.event.performances.length === 1">at {{ vm.event.performances[0].startDate | amDateFormat: 'h:mma' }}</span>
+  </div>
+
+</div>
