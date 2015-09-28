@@ -1,12 +1,12 @@
 .event-single {
 
+  margin: 20px 50px;
+
   .event-title {
 
-    margin:0 0 2em 0;
+    margin:0 0 1em 0;
 
     .event-title__prefix {
-      font-weight:bold;
-      color: #666666;
     }
 
     .event-title__name {
@@ -15,9 +15,7 @@
   }
   
   .event-date {
-    @include font-size(18);
     font-weight:bold;
-    color: #666666;
   }
 
 }
