@@ -1,0 +1,14 @@
+{
+  "name": "angularjs-modules-unit-tests",
+  "dependencies": {
+    "angular": "^1.4.5",
+    "angular-mocks": "^1.4.5",
+    "angular-ui-router": "^0.2.15",
+    "karma": "^0.12.24",
+    "karma-jasmine": "^0.1.5",
+    "karma-mocha-reporter": "^1.1.1",
+    "karma-phantomjs-launcher": "^0.1.4",
+    "karma-sinon": "^1.0.4",
+    "sinon": "^1.16.1"
+  }
+}

@@ -1,0 +1,24 @@
+machine:
+  environment:
+    SAUCE_TUNNEL_ID: circle-angularjsmodules-$CIRCLE_BUILD_NUM
+
+dependencies:
+
+  override:
+    - npm install
+
+  post:
+    # karma setup
+    - npm install -g karma-cli
+
+test:
+  override:
+    - karma start karma.conf.js --single-run:
+        pwd:
+          test/unit
+
+general:
+  branches:
+    ignore:
+      # add your branch name here if you don't want it to build in CircleCI
+      - do_not_build_this_branch

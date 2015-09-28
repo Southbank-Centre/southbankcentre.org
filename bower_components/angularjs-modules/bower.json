@@ -1,0 +1,11 @@
+{
+  "name": "angularjs-modules",
+  "ignore": [
+    "**/.*",
+    "*/*/app",
+    "*/*/node_modules",
+    "*/*/package.json",
+    "*/*/Gruntfile.js",
+    "test"
+  ]
+}
