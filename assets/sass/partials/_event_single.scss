@@ -1,0 +1,23 @@
+.event-single {
+
+  .event-title {
+
+    margin:0 0 2em 0;
+
+    .event-title__prefix {
+      font-weight:bold;
+      color: #666666;
+    }
+
+    .event-title__name {
+      margin: 0;
+    }
+  }
+  
+  .event-date {
+    @include font-size(18);
+    font-weight:bold;
+    color: #666666;
+  }
+
+}
