@@ -63,7 +63,7 @@ describe('The single event page', function() {
 
             return {
 
-              item: function(type, id, options) { 
+              item: function(type, id, options) {
                 return $q.when(testEvents[id]);
               },
 
@@ -106,6 +106,15 @@ describe('The single event page', function() {
     expect(element(by.css('.event-title__name')).getText()).toEqual('Event name');
     expect(element(by.css('.event-title__suffix')).getText()).toEqual('Event suffix');
     expect(element(by.css('.event-date')).getText()).toEqual('Tuesday 23 February 2016 – Thursday 25 February 2016');
+  });
+
+  it('should display the 404 page when an event is not found', function() {
+    browser.get(browser.params.url + '#!event/does-not-exist-123');
+    expect(element.all(by.css('.event-title__prefix')).count()).toEqual(0);
+    expect(element.all(by.css('.event-title__name')).count()).toEqual(0);
+    expect(element.all(by.css('.event-title__suffix')).count()).toEqual(0);
+    expect(element.all(by.css('.event-date')).count()).toEqual(0);
+    expect(element(by.tagName('h1')).getText()).toEqual('Page not found.');
   });
 
 });
