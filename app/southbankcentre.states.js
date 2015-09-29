@@ -25,6 +25,13 @@
               controllerAs: 'vm'
             }
           }
+        })
+        .state('404', {
+          views: {
+            '@': {
+              templateUrl: 'app/404.tpl.html',
+            }
+          }
         });
 
     });

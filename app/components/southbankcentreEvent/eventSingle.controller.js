@@ -12,9 +12,9 @@
     .module('southbankcentreEvent')
     .controller('EventSingleCtrl', EventSingleCtrl);
 
-  EventSingleCtrl.$inject= ['scContentGet', '$stateParams'];
+  EventSingleCtrl.$inject= ['scContentGet', '$stateParams', '$state'];
 
-  function EventSingleCtrl(scContentGet, $stateParams) {
+  function EventSingleCtrl(scContentGet, $stateParams, $state) {
 
     var vm = this;
     vm.event = {};
@@ -23,13 +23,19 @@
     activate();
 
     function activate() {
-      return getEvent();
+      return getEvent().then(function() {
+        if (vm.event === undefined) {
+          $state.go('404');
+        }
+      });
     }
 
     function getEvent() {
       return scContentGet.item('arrangement', $stateParams.id).then(function(data) {
         vm.event = data;
-        getEventPerformances();
+        if (vm.event) {
+          getEventPerformances();
+        }
       });
     }
 
