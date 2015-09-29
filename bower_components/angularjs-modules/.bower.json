@@ -9,14 +9,14 @@
     "test"
   ],
   "homepage": "https://github.com/Southbank-Centre/angularjs-modules",
-  "_release": "7d50f6ad4f",
+  "version": "0.0.0",
+  "_release": "0.0.0",
   "_resolution": {
-    "type": "branch",
-    "branch": "101670788_content_retrieval",
-    "commit": "7d50f6ad4ff5ff21fedcc81c5a978b554e39b9d1"
+    "type": "version",
+    "tag": "v0.0.0",
+    "commit": "44bd311f73d9995a30dafe47098891cf1dfc4384"
   },
   "_source": "git://github.com/Southbank-Centre/angularjs-modules.git",
-  "_target": "101670788_content_retrieval",
-  "_originalSource": "Southbank-Centre/angularjs-modules",
-  "_direct": true
+  "_target": "0.0.0",
+  "_originalSource": "Southbank-Centre/angularjs-modules"
 }
