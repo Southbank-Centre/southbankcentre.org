@@ -51,6 +51,7 @@
     "grunt-newer": "^1.1.1",
     "grunt-ng-annotate": "^1.0.1",
     "grunt-ngdocs": "~0.2.8",
+    "grunt-sass": "^1.0.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
     "jshint-stylish": "^2.0.1",
@@ -59,6 +60,7 @@
     "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "^0.2.0",
     "load-grunt-tasks": "^3.2.0",
+    "node-bourbon": "^4.2.3",
     "time-grunt": "^1.2.1"
   },
   "engines": {
