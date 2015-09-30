@@ -5,10 +5,6 @@ machine:
   node:
     version: 0.12.2
 
-  ruby:
-    version:
-      2.0.0-p353
-
   # Override /etc/hosts
   hosts:
     sc.circle: 127.0.0.1
@@ -24,7 +20,6 @@ dependencies:
     - npm install -g grunt-cli
     - npm install -g karma-cli
     - npm install
-    - bundle install --system
     - bower install
     - grunt build
 
