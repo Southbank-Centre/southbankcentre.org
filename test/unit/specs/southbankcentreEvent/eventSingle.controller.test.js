@@ -18,7 +18,7 @@
             }
             return $q.when(testData);
           },
-          itemByPath: function() {
+          itemByURL: function() {
             return $q.when({
               'performance':'here'
             });
