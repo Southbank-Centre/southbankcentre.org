@@ -6,8 +6,6 @@ This is the codebase for the Southbank Centre front-end website. It's an [Angula
 
 ### Requirements
 
-- Ruby >= 2.0.0p353
-- bundler (http://bundler.io/)
 - node.js and npm (http://nodejs.org/)
 - grunt-cli (http://gruntjs.com/getting-started)
 - bower (http://bower.io/#install-bower)
@@ -15,13 +13,7 @@ This is the codebase for the Southbank Centre front-end website. It's an [Angula
 
 ### Dependency installation
 
-Node modules, Bower components and Ruby Gems are already included in this repository, so there is no need to install them. However if you do need to install them again please follow the steps below:
-
-After installing the software listed in the requirements above and cloning a copy of this app, run the following to install the correct dependencies for the app.
-
-Run the following in the base directory:
-
-    $ bundle install --deployment
+After installing the software listed in the requirements above and cloning a copy of this app, run the following from the base directory to install the correct dependencies for the app:
 
     $ npm install
 
@@ -45,32 +37,9 @@ To build the app in a distributable form, run the following from the base direct
 
 The files will be compiled into the `/dist` directory.
 
-## Installing SC-app-\* modules
+## Installing angularjs-modules
 
-SC-app-\* modules can be installed using bower in the following way, using SC-app-event as an example:
-
-    $ bower install --save Southbank-Centre/SC-app-event
-
-The files will be installed into the `/bower_components` directory. Re-running `$ grunt serve` will include the module in the `index.html` file. You can then include it as a dependency of your app in your `*.module.js` file.
-
-*Most SC-app-\* modules also include other instructions to integrate their features into your app, so make sure you read their README files.*
-
-_**Always install a module's tests into your app.**_ See the section *Tests* below.
-
-#### App config constants
-
-Certain functionality requires that you define constants in southbankcentre.constants.js. These should match the data you are intending to get from the CMS. This can be gathered from the CMS or examining the JSON output.
-
-- __festivalAlias__ Required by SC-app-festival. The Drupal alias of a festival content type.
-- __ticketingVocabularyId__ Required by SC-app-festival. The taxonomy used for the ticketing model.
-- __homeLandingPageAlias__ The Drupal alias of a landing page content type.
-- __disqus_shortname__ Required to enable commenting on blogs provided by SC-app-blog module. Used by the third party discussion tool Disqus.
-- __hostName__ Required to enable commenting on blogs provided by SC-app-blog module. Used by the third party discussion tool Disqus.
-- __schedPlannerShortname__ Required by SC-app-planner. Used by the third party planner tool Sched.
-
-## Adding a homepage
-
-See the README for [SC-app-landing-page](https://github.com/Southbank-Centre/SC-app-landing-page).
+See the README for [Southbank-Centre/angularjs-modules](https://github.com/Southbank-Centre/angularjs-modules/blob/master/README.md)
 
 ## Testing
 

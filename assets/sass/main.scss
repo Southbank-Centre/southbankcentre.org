@@ -1,15 +1,14 @@
-@import "compass";
-@import "susy";
-@import "breakpoint/breakpoint";
+@import "../../bower_components/susy/sass/susy";
+@import "../../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+/* Bourbon mixins */
+@import "bourbon";
 
 /* Reset */
 @import "vendor/_html5doctorreset.min.scss";
 
 /* Grid */
 @import "partials/grid";
-
-/* Bourbon mixins */
-@import "bourbon/bourbon";
 
 /* Variables */
 @import "partials/variables";
@@ -35,4 +34,4 @@
 
 //DEVELOPMENT
 /* Grid overlay */
-@import "partials/grid_overlay";
+//@import "partials/grid_overlay";

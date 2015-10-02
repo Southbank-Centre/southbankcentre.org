@@ -83,9 +83,9 @@ module.exports = function (grunt) {
         files: ['test/**/*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      compass: {
+      sass: {
         files: ['assets/sass/{,*/}*.{scss,sass}'],
-        tasks: ['prepareSASS', 'compass:server', 'autoprefixer']
+        tasks: ['prepareSASS', 'sass:server', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -106,7 +106,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9001,
+        port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         // hostname: 'localhost',
         hostname: 'localhost',
@@ -230,7 +230,8 @@ module.exports = function (grunt) {
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
-        browsers: ['last 1 version']
+        browsers: ['last 1 version'],
+        map: true
       },
       dist: {
         files: [{
@@ -255,31 +256,21 @@ module.exports = function (grunt) {
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
-    compass: {
+    sass: {
       options: {
-        sassDir: '.tmp/sass/<%= sassDir %>',
-        cssDir: '.tmp/assets/css',
-        generatedImagesDir: '.tmp/assets/imgs/generated',
-        imagesDir: 'assets/imgs',
-        javascriptsDir: 'assets/js',
-        fontsDir: 'assets/fonts',
-        importPath: './<%= bowerrc.directory %>',
-        httpImagesPath: '/assets/imgs',
-        httpGeneratedImagesPath: '/assets/imgs/generated',
-        httpFontsPath: '/assets/fonts',
-        relativeAssets: false,
-        assetCacheBuster: false,
-        raw: 'Sass::Script::Number.precision = 10\n'
+        includePaths: require('node-bourbon').includePaths
       },
       dist: {
-        options: {
-          generatedImagesDir: '<%= yeoman.dist %>/assets/imgs/generated'
-        }
+        files: {
+          '.tmp/assets/css/main.css': '.tmp/<%= sassDir %>/main.scss'
+        },
       },
       server: {
+        files: {
+          '.tmp/assets/css/main.css': '.tmp/<%= sassDir %>/main.scss'
+        },
         options: {
-          debugInfo: true,
-          sourcemap: true
+          sourceMap: true
         }
       }
     },
@@ -495,14 +486,19 @@ module.exports = function (grunt) {
       },
       appStyles: {
         expand: true,
-        dest: '.tmp/sass',
+        dest: '.tmp',
         src: [
           '<%= sassDir %>/**/*'
         ]
       },
+      bowerComponents: {
+        expand: true,
+        dest: '.tmp',
+        src: ['<%= bowerrc.directory %>/**/*']
+      },
       moduleStyles: {
         expand: true,
-        dest: '.tmp/sass/<%= sassDir %>/modulePartials',
+        dest: '.tmp/<%= sassDir %>/modulePartials',
         src: [
           '<%= bowerrc.directory %>/SC-app-*/release/assets/sass/**/*'
         ],
@@ -513,16 +509,16 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'compass:server'
+        'sass:server'
       ],
       test: [
-        'compass'
+        'sass'
       ],
       dist: [
-        'compass:dist'
+        'sass:dist'
       ],
       dev: [
-        'compass:dist'
+        'sass:dist'
       ]
     },
 
