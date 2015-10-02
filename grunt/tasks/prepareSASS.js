@@ -4,6 +4,7 @@ module.exports = function(grunt){
     'prepareSASS',
     [
       'copy:appStyles',
+      'copy:bowerComponents',
       'copy:moduleStyles',
       'includeModuleSASS'
     ]
