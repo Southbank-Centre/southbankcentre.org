@@ -106,7 +106,7 @@ module.exports = function (grunt) {
     // The actual grunt server settings
     connect: {
       options: {
-        port: 9002,
+        port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
         // hostname: 'localhost',
         hostname: 'localhost',
@@ -225,7 +225,8 @@ module.exports = function (grunt) {
     // Add vendor prefixed styles
     autoprefixer: {
       options: {
-        browsers: ['last 1 version']
+        browsers: ['last 1 version'],
+        map: true
       },
       dist: {
         files: [{
