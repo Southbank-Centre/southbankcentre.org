@@ -17,7 +17,7 @@ describe('The single event page', function() {
                 'startDate': '2016-02-23T00:00:00+00:00',
                 'endDate': '2016-02-23T00:00:00+00:00',
                 'subEvent': [
-                  'http://example.com/api/event/performance-name-123.json'
+                  'http://example.com/api/performance/performance-name-123.json'
                 ]
               },
               'multi-day-single-perf-123': {
@@ -27,7 +27,7 @@ describe('The single event page', function() {
                 'startDate': '2016-02-23T00:00:00+00:00',
                 'endDate': '2016-02-25T00:00:00+00:00',
                 'subEvent': [
-                  'http://example.com/api/event/performance-name-123.json'
+                  'http://example.com/api/performance/performance-name-123.json'
                 ]
               },
               'single-day-multi-perf-123': {
@@ -37,8 +37,8 @@ describe('The single event page', function() {
                 'startDate': '2016-02-23T00:00:00+00:00',
                 'endDate': '2016-02-23T00:00:00+00:00',
                 'subEvent': [
-                  'http://example.com/api/event/performance-name-123.json',
-                  'http://example.com/api/event/performance-name-123.json'
+                  'http://example.com/api/performance/performance-name-123.json',
+                  'http://example.com/api/performance/performance-name-123.json'
                 ]
               },
               'multi-day-multi-perf-123': {
@@ -48,9 +48,9 @@ describe('The single event page', function() {
                 'startDate': '2016-02-23T00:00:00+00:00',
                 'endDate': '2016-02-25T00:00:00+00:00',
                 'subEvent': [
-                  'http://example.com/api/event/performance-name-123.json',
-                  'http://example.com/api/event/performance-name-123.json',
-                  'http://example.com/api/event/performance-name-123.json'
+                  'http://example.com/api/performance/performance-name-123.json',
+                  'http://example.com/api/performance/performance-name-123.json',
+                  'http://example.com/api/performance/performance-name-123.json'
                 ]
               }
             };
@@ -67,7 +67,7 @@ describe('The single event page', function() {
                 return $q.when(testEvents[id]);
               },
 
-              itemByPath: function() {
+              itemByURL: function() {
                 return $q.when(testPerformance);
               }
 
