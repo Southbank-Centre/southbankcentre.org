@@ -110,7 +110,12 @@ module.exports = function (grunt) {
         // Change this to '0.0.0.0' to access the server from outside.
         // hostname: 'localhost',
         hostname: 'localhost',
-        livereload: 35729
+        livereload: 35729,
+        middleware: function () {
+          return [
+            modRewrite (['^ /index.html']),
+          ];
+        }
       },
       proxies: [
         {

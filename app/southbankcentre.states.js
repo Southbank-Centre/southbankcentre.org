@@ -15,6 +15,23 @@
           views: {
             '@': {}
           }
+        })
+        .state('app.eventSingle', {
+          url: '/event/:id',
+          views: {
+            '@': {
+              templateUrl: 'app/components/southbankcentreEvent/eventSingle.tpl.html',
+              controller: 'EventSingleCtrl',
+              controllerAs: 'vm'
+            }
+          }
+        })
+        .state('404', {
+          views: {
+            '@': {
+              templateUrl: 'app/404.tpl.html',
+            }
+          }
         });
 
     });

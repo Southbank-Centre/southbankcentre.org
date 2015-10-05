@@ -5,6 +5,7 @@ html, body {
 }
 
 body {
+  margin: 20px 50px;
   background-color: $light-grey;
 }
 
@@ -29,13 +30,13 @@ ul, ol {
 
 a {
 
-  &:link, 
+  &:link,
   &:visited {
     color: $link-color;
     text-decoration: none;
   }
 
-  &:hover, 
+  &:hover,
   &:active {
     color: $link-color;
     text-decoration: underline;
@@ -43,8 +44,8 @@ a {
 
 }
 
-.book-now-btn, 
-.book-now-btn[href^="http://"], 
+.book-now-btn,
+.book-now-btn[href^="http://"],
 .book-now-btn[href^="https://"] {
   display: block;
   margin-top: 3px;
@@ -100,7 +101,7 @@ a[href^="https://"] {
 }
 
 
-// Animations 
+// Animations
 
 .slidedown,
 .slideup {
@@ -219,7 +220,7 @@ a[href^="https://"] {
   100%{background-position:0 1216px;}
 }
 
-.lt-ie10 .page-loading { 
+.lt-ie10 .page-loading {
   background: url('../imgs/spinner.gif');
 }
 
