@@ -152,6 +152,10 @@ exports.config = {
     global.isAngularSite = function(flag){
       browser.ignoreSynchronization = !flag;
     };
+
+    // halt tests if there is a failure
+    var failFast = require('jasmine-fail-fast');
+    jasmine.getEnv().addReporter(failFast.init());
   }
 
 };
