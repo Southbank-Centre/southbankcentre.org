@@ -551,11 +551,11 @@ module.exports = function (grunt) {
         name: '<%= yeoman.name %>',
         template: grunt.file.read('grunt/ngconstant/constant.tpl.ejs')
       },
-      dev: {
+      development: {
         options: {
           dest: '<%= yeoman.app %>/app/<%= yeoman.name %>.envconfig.js'
         },
-        constants: require('./grunt/ngconstant/dev.json')
+        constants: require('./grunt/ngconstant/development.json')
       },
       staging: {
         options: {
