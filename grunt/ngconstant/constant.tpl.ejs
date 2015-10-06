@@ -1,0 +1,9 @@
+/**
+ * Automatically generated. Modifications will be overwritten.
+ * See grunt ngconstant task
+ */
+(function() {
+  'use strict';
+  angular.module('{%- moduleName %}')
+    {% constants.forEach(function (constant) { %}.constant('{%- constant.name %}', {%= constant.value %}){% }); values.forEach(function (value) { %}.value('{%- value.name %}', {%= value.value %}){% }) %};
+})();

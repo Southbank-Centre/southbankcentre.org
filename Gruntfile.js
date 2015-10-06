@@ -24,6 +24,7 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || __dirname,
+    name: require('./bower.json').name,
     dist: 'dist'
   };
 
@@ -541,6 +542,32 @@ module.exports = function (grunt) {
       api: {
         src: ['<%= yeoman.app %>/app/{,**/}*.js'],
         title: 'Angular App Documentation'
+      }
+    },
+
+    // Rewrite constants based on environment config
+    ngconstant: {
+      options: {
+        name: '<%= yeoman.name %>',
+        template: grunt.file.read('grunt/ngconstant/constant.tpl.ejs')
+      },
+      development: {
+        options: {
+          dest: '<%= yeoman.app %>/app/<%= yeoman.name %>.envconfig.js'
+        },
+        constants: require('./grunt/ngconstant/development.json')
+      },
+      staging: {
+        options: {
+          dest: '<%= yeoman.app %>/app/<%= yeoman.name %>.envconfig.js'
+        },
+        constants: require('./grunt/ngconstant/staging.json')
+      },
+      production: {
+        options: {
+          dest: '<%= yeoman.app %>/app/<%= yeoman.name %>.envconfig.js'
+        },
+        constants: require('./grunt/ngconstant/production.json')
       }
     }
   });
