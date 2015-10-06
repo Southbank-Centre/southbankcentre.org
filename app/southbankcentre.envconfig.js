@@ -5,5 +5,5 @@
 (function() {
   'use strict';
   angular.module('southbankcentre')
-    .constant('scContentBaseURL', 'http://webcontent.southbankcentre.org');
+    .constant('scContentBaseURL', 'http://webcontent.dev.southbankcentre.org');
 })();
