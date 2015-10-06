@@ -54,6 +54,7 @@
     "grunt-sass": "^1.0.0",
     "grunt-usemin": "^3.0.0",
     "grunt-wiredep": "^2.0.0",
+    "jasmine-fail-fast": "^2.0.0",
     "jshint-stylish": "^2.0.1",
     "karma": "^0.12.37",
     "karma-jasmine": "^0.3.6",
