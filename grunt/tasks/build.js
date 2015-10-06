@@ -10,7 +10,7 @@ module.exports = function(grunt){
       }
 
       if (!env) {
-        env = 'dev';
+        env = 'development';
       }
 
       grunt.task.run([
